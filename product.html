@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrueTaste - Beyond Burger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/truetastelogo.png" alt="TrueTaste Logo" class="logo-img">
+        </div>
+        <nav class="nav-links">
+            <a href="products.html">Products</a>
+            <a href="whatsnew.html">What's New</a>
+            <a href="faq.html">FAQs</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-link">
+                <svg class="cart-icon-svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span id="cart-counter">0</span>
+            </a>
+            <input type="text" placeholder="Value" class="search-bar">
+            <button class="btn-signin" onclick="handleSignIn()">Sign in</button>
+        </div>
+    </header>
+
+    <main class="product-layout">
+        <section class="product-image-section">
+            <img src="images/beyondburgerlogo.png" alt="Beyond Burger Packages" class="main-product-img">
+        </section>
+
+        <section class="product-info-section">
+            <h1 class="product-title">BEYOND BURGER<br>PLANT BASED<br>PATTIES</h1>
+            <div class="reviews-row">
+                <span class="stars">⭐⭐⭐⭐⭐</span> <a href="#" class="review-link">67 reviews</a>
+            </div>
+            <div class="badge badge-top">Guilt-free</div>
+            <div class="badge badge-bottom">Kosher</div>
+            <h2 class="product-price">₱350.50</h2>
+
+            <div class="purchase-actions">
+                <div class="quantity-selector">
+                    <button class="btn-qty decrease" onclick="updateProductQuantity(-1)">-</button>
+                    <span id="productQuantity">1</span>
+                    <button class="btn-qty increase" onclick="updateProductQuantity(1)">+</button>
+                </div>
+                <button class="btn-add-cart" onclick="addToCart()">🛒 Add to cart</button>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('description')">Description</button>
+                <button class="tab-btn" onclick="switchTab('reviews')">Reviews</button>
+                <button class="tab-btn" onclick="switchTab('faq')">FAQ</button>
+            </div>
+            <div class="tab-content" id="tab-description">
+                <p>The Beyond Burger is a plant-based burger that looks, cooks, and satisfies like beef. It has all the juicy, meaty deliciousness of a traditional burger, but comes with the upsides of a plant-based meal.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><strong>Freshness You Trust</strong></p>
+        <div class="social-icons">
+            <img src="images/sociallinks.png" alt="Social Links" height="20">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
